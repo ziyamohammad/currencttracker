@@ -1,11 +1,11 @@
 # Crypto Market Dashboard 💰
 
-A sleek real-time cryptocurrency dashboard built with **React** and **Binance WebSocket**, powered by **CoinGecko API** for comprehensive market data. See live prices, charts, and market stats in one beautifully animated UI.
+A sleek real-time cryptocurrency dashboard built with **React** , powered by **CoinGecko API** for comprehensive market data. See live prices, charts, and market stats in one beautifully animated UI.
 
 ---
 
 ## ✨ Features
-- Real-time crypto price updates using Binance WebSocket
+- Real-time crypto price updates using CoinGecko API
 - CoinGecko market data with 1h, 24h, 7d price changes
 - Mini sparkline charts for the past 7 days
 - Formatted market caps, volumes, and supplies
@@ -19,7 +19,7 @@ A sleek real-time cryptocurrency dashboard built with **React** and **Binance We
 |--------------|---------------------------------------------|
 | Frontend     | React, Axios,Redux , Lucide Icons      |
 | Data API     | CoinGecko API (market data)                |
-| Live Prices  | CoinGeckoS API                     |
+| Live Prices  | CoinGecko API                     |
 | Charts       | Inline SVG sparkline renderer              |
 | Styling      | Custom CSS with modular architecture       |
 
@@ -30,12 +30,10 @@ A sleek real-time cryptocurrency dashboard built with **React** and **Binance We
 ```
 CryptoDashboard.js
 ├─ useEffect 1: Fetch market data from CoinGecko
-├─ useEffect 2: Open Binance WebSocket stream
 └─ setCryptoData: Updates state with real-time prices
 ```
 
 - **CoinGecko**: Initializes all coin market info (price, changes, sparkline, supply).
-- **Binance WebSocket**: Streams individual `symbol@ticker` prices and updates prices in state.
 - **UI**: Responsive table layout with custom rendering per column.
 
 ---
@@ -67,8 +65,8 @@ You can edit `CryptoDashboard.js` to add filters, sorting, or even switch to dar
 
 > A quick walkthrough of the app showcasing:
 > - Initial UI layout
-> - Real-time price updates from Binance
-> - How WebSocket + CoinGecko integration works
+> - Real-time price updates from CoinGecko
+> - How  CoinGecko integration works
 
 ### 📹 Watch Here:
 ![Demo]
@@ -77,7 +75,6 @@ You can edit `CryptoDashboard.js` to add filters, sorting, or even switch to dar
 ## 🧹 Thought Process
 
 - CoinGecko provides stable, structured crypto market data — perfect for layout.
-- Binance WebSocket is ultra-fast and precise for updating prices live.
 - Combined both with React state to sync data streams in one dashboard.
 - Minimal dependencies; no chart libraries, just pure SVG.
 - Optimized for performance, even on slower connections.
@@ -85,7 +82,6 @@ You can edit `CryptoDashboard.js` to add filters, sorting, or even switch to dar
 ---
 
 ## 🚫 Known Limitations
-- Binance only supports USDT trading pairs.
 - Not using a backend or database for favorites or user auth.
 - Sparkline charts are purely visual, no hover tooltip yet.
 
