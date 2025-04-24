@@ -17,9 +17,9 @@ A sleek real-time cryptocurrency dashboard built with **React** and **Binance We
 
 | Layer         | Tech Used                                  |
 |--------------|---------------------------------------------|
-| Frontend     | React, Axios, WebSockets, Lucide Icons      |
+| Frontend     | React, Axios,Redux , Lucide Icons      |
 | Data API     | CoinGecko API (market data)                |
-| Live Prices  | Binance WebSocket API                      |
+| Live Prices  | CoinGeckoS API                     |
 | Charts       | Inline SVG sparkline renderer              |
 | Styling      | Custom CSS with modular architecture       |
 
