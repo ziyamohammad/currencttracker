@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Crypto Market Dashboard 💰
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek real-time cryptocurrency dashboard built with **React** and **Binance WebSocket**, powered by **CoinGecko API** for comprehensive market data. See live prices, charts, and market stats in one beautifully animated UI.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
+- Real-time crypto price updates using Binance WebSocket
+- CoinGecko market data with 1h, 24h, 7d price changes
+- Mini sparkline charts for the past 7 days
+- Formatted market caps, volumes, and supplies
+- Fully responsive layout with interactive UI elements
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🤖 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Layer         | Tech Used                                  |
+|--------------|---------------------------------------------|
+| Frontend     | React, Axios, WebSockets, Lucide Icons      |
+| Data API     | CoinGecko API (market data)                |
+| Live Prices  | Binance WebSocket API                      |
+| Charts       | Inline SVG sparkline renderer              |
+| Styling      | Custom CSS with modular architecture       |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Architecture Overview
 
-### `npm run build`
+```
+CryptoDashboard.js
+├─ useEffect 1: Fetch market data from CoinGecko
+├─ useEffect 2: Open Binance WebSocket stream
+└─ setCryptoData: Updates state with real-time prices
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **CoinGecko**: Initializes all coin market info (price, changes, sparkline, supply).
+- **Binance WebSocket**: Streams individual `symbol@ticker` prices and updates prices in state.
+- **UI**: Responsive table layout with custom rendering per column.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Setup Instructions
 
-### `npm run eject`
+### 1. Clone the Repo
+```bash
+git clone https://github.com/yourusername/crypto-dashboard.git
+cd crypto-dashboard
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Start the App
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Optional: Customize
+You can edit `CryptoDashboard.js` to add filters, sorting, or even switch to dark mode!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎥 Demo Video / GIF
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> A quick walkthrough of the app showcasing:
+> - Initial UI layout
+> - Real-time price updates from Binance
+> - How WebSocket + CoinGecko integration works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📹 Watch Here:
+![Demo]
+---
 
-### Code Splitting
+## 🧹 Thought Process
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- CoinGecko provides stable, structured crypto market data — perfect for layout.
+- Binance WebSocket is ultra-fast and precise for updating prices live.
+- Combined both with React state to sync data streams in one dashboard.
+- Minimal dependencies; no chart libraries, just pure SVG.
+- Optimized for performance, even on slower connections.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚫 Known Limitations
+- Binance only supports USDT trading pairs.
+- Not using a backend or database for favorites or user auth.
+- Sparkline charts are purely visual, no hover tooltip yet.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💼 License
+MIT License. Use freely and remix for your own projects!
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
