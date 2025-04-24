@@ -57,9 +57,9 @@ h1{
   transition: background-color 0.2s;
 }
 
-.cryptoRow:hover {
+/* .cryptoRow:hover {
   background-color: #f8f9fa;
-}
+} */
 
 .numberColumn {
   width: 40px;
